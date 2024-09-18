@@ -1,6 +1,13 @@
-import flet as ft
+from flet import *
 
-def main(page: ft.Page):
-    page.add(ft.Text(value="Hello, world!"))
-
-ft.app(main)
+def main(page:Page):
+	page.appbar = AppBar(title=Text("Yooutube app"))
+	page.add(
+		Container(
+			bgcolor="red",
+			padding=10,
+			alignment=alignment.center,
+			content=Text("hello",size=30,weight="bold")
+			)
+		)
+app(main)
